@@ -1,0 +1,4 @@
+variables , espacio que puede cambiar de valor.
+para poner una variable va var y despues el nombre de la variable.
+promp (sale un mensaje de la nada) pedirle informacion al usuario que el usuario devuelve.
+variables se escriben siempre en ingles
