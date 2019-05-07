@@ -94,12 +94,162 @@ console.log('Estamos de paro!')
 
 // console.log(res)
 
+// var text =
+//   'El amor juega a inventarse, huye de sí mismo para volver en su espiral sobrecogedora, los senos cantan de otro modo, la boca besa más profundamente o como de lejos, y en un momento donde antes había como cólera y angustia es ahora el juego puro, el retozo increíble, o al revés, a la hora en que antes se caía en el sueño, el balbuceo de dulces cosas tontas, ahora hay una tensión, algo incomunicado pero presente que exige incorporarse, algo como una rabia insaciable. Sólo el placer en su aletazo último es el mismo; antes y después el mundo se ha hecho pedazos y hay que nombrarlo de nuevo, dedo por dedo, labio por labio, sombra por sombra'
+
+// var textUpeerCase = text.toUpperCase()
+
+// var searchText = prompt('Ingresa un texto')
+
+// var searchTextUpperCase = searchText.toUpperCase()
+
+// if (textUpeerCase.indexOf(searchTextUpperCase) !== -1) {
+//   console.log('La palabra ' + searchText + ' existe en el texto')
+// }
+
 // - 6.3	Validación de Array mediante `Array.isArray()`
+
+// var colors = [ 'red', 'blue', 'pink' ]
+
+// if (Array.isArray(colors)) {
+//   console.log('Es un Array')
+// } else {
+//   console.log('No es un Array')
+// }
+
 // - 6.4	Métodos de Array
 //    - `length`
 //    - `toString`
-//    - `push`
+
+// var colors = [ 'red', 'blue', 'pink' ]
+
+// if (Array.isArray(colors)) {
+//   console.log(colors.toString())
+// }
+
 //    - `join`
-//    - `slice`
-//    - `splice`
+
+// var colors = [ 'red', 'blue', 'pink' ]
+
+// if (Array.isArray(colors)) {
+//   console.log(colors.join(' '))
+//   console.log(colors)
+// }
+
+//    - `push`
+
+// var colors = [ 'red', 'blue', 'pink' ]
+
+// console.log(colors)
+
+// colors.push('grey')
+
+// colors[1] = 'white'
+
+// console.log(colors)
+
 //    - `sort`
+
+// var students = [
+//   {
+//     firstName: 'Juan',
+//     lastName: 'Pérez',
+//     dni: 1234,
+//     email: 'juan@gmail.com'
+//   },
+//   {
+//     firstName: 'Ana',
+//     dni: 1233,
+//     email: 'ana@gmail.com'
+//   },
+//   {
+//     firstName: 'Pedro',
+//     lastName: 'Mármol',
+//     dni: 1222,
+//     email: 'pedro@gmail.com'
+//   }
+// ]
+
+// console.log(students.sort(compare))
+
+// function compare (studentA, studentB) {
+//   if (studentA.email < studentB.email) {
+//     return -1
+//   }
+//   if (studentA.email > studentB.email) {
+//     return 1
+//   }
+//   // a debe ser igual b
+//   return 0
+// }
+
+//    - `slice`
+
+// var colors = [ 'red', 'blue', 'pink' ]
+
+// var colorsCopy = colors.slice()
+
+// colorsCopy.push('grey')
+
+// console.log(colors)
+
+// console.log(colorsCopy)
+
+//    - `splice`
+
+// var colors = [ 'red', 'blue', 'pink' ]
+
+// var userColor = prompt('Ingresá el color')
+
+// var index = colors.indexOf(userColor)
+
+// if (index !== -1) {
+//   colors.splice(index, 1)
+// }
+
+// console.log(colors)
+
+// var numbers = [1,2,3,4,5]
+
+// var numbersUpdated = numbers.slice()
+
+// function deleteElement (a, b){
+//     numbersUpdated.splice (a, b)
+//     return numbersUpdated
+// }
+// console.log(numbers)
+
+// console.log(deleteElement(2, 1))
+
+// var numbers = [ 1, 2, 3, 4, 5 ]
+
+// var numbersCopy = numbers.slice()
+
+// numbers.push(98)
+
+// console.log(numbers)
+// console.log(numbersCopy)
+// console.log(numbers === numbersCopy)
+
+// var text = 'Pato'
+
+// var textCopy = text
+
+// text = 'Ganso'
+
+// console.log(text)
+// console.log(textCopy)
+// console.log(text === textCopy)
+
+function deleteElement (index, array) {
+  var arrayCopy = array.slice()
+
+  arrayCopy.splice(index, 1)
+
+  return arrayCopy
+}
+
+var newNumbers = deleteElement(2, numbers) // Devuelve un nuevo Array [1,2,4,5]
+
+console.log(numbers)
+console.log(newNumbers)
