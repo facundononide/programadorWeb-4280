@@ -31,7 +31,7 @@ var studentsList = [
  * @returns {number} posición del estudiante en el Array, si no lo encuentra -1
  */
 
-function searchStudentIndexByText (text, studentsList) {
+function searchStudentIndexByText(text, studentsList) {
   var index = -1
   for (var i = 0; i < studentsList.length; i++) {
     var student = studentsList[i]
